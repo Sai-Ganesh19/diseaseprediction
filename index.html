@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Plant Disease CLASSIFICATION</title>
+    <style>
+
+        *{box-sizing: border-box;}
+        body{background-image: url('static/rice-bg.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;}
+        .mainTit{text-align: center;margin: 25px;padding: 15px 0;color: #fff;background-color: #324222;
+            border-radius: 10px;}
+        .mainForm{text-align: center;}
+        input{margin: 100px 0 50px;color: #fff;}
+        button{display: block;margin: auto;border: none;background-color: #324222;color: #fff;
+            width: 160px;height: 40px;border-radius: 5px;font-size: 19px;margin-bottom: 20px;}
+        p{margin: 15px 17%;color: #fff;font-size: 20px;background-color: #324222;border-radius: 5px;
+            padding: 5px;display: none;}
+        .imgFile{width: 40%;margin: auto;}
+        img{width: 100%;}
+        
+    </style>
+
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+
+            <div class="mainTit">
+                <h2>Plant Disease CLASSIFICATION</h2>
+
+     
+            </div>
+            <div class="mainForm">
+                <form action="/upload" method="POST" enctype = "multipart/form-data">
+                    <input type="file" name="filename">
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="imgFile">
+                    <img src="{{src}}">
+                </div>
+                <p {{view}}><strong>{{msg}}</strong><br>Scientific Name : {{msg2}}<br>Fertilizer is : {{msg1}}</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
